@@ -32,7 +32,7 @@ public class Hola {
 	}
 	
 	public static void ciclos() {
-		int i = 0;
+//		int i = 0;
 //		while (i < 10) {
 //			i++;
 //			System.out.println("Iteracion no: " + i);
@@ -45,14 +45,24 @@ public class Hola {
 //		
 //		System.out.println("Fin del ciclo");
 		
-		String opcion;
-		do {
-			System.out.println("Ingrese una opcion");
-			Scanner input = new Scanner(System.in);
-			opcion = input.next();
-		} while (!opcion.equals("OK"));
+//		String opcion;
+//		do {
+//			System.out.println("Ingrese una opcion");
+//			Scanner input = new Scanner(System.in);
+//			opcion = input.next();
+//		} while (!opcion.equals("OK"));
+//		
+//		System.out.println("Gracias!!");
 		
-		System.out.println("Gracias!!");	
+		String[] nombres = {"Juan", "Pedro", "Jose", "Maria"};
+		for(int i=0; i<nombres.length; i++) {
+			System.out.println("posicion " + i + " esta " 
+		       + nombres[i]);
+		}
+		
+		for(String nombre : nombres) {
+			System.out.println(nombre);
+		}
 	}
 
 }
