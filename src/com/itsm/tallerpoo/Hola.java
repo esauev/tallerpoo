@@ -9,7 +9,8 @@ public class Hola {
 //		entradaDatos();
 //		ciclos();
 //		vectores();
-		matrices();
+//		matrices();
+		funcionSwith();
 	}
 	
 	public static void condicionales() {
@@ -124,6 +125,23 @@ public class Hola {
 					System.out.print(caja[i][j]);	
 			}
 		}
+	}
+	
+	
+	public static void funcionSwith() {
+		String caso = "1";
+		switch (caso) {
+		case "1":
+			System.out.println("Entraste al caso 1");
+			break;
+		case "2":
+			System.out.println("Entraste al caso 2");
+
+		default:
+			System.out.println("No encontramos caso");
+			break;
+		}
+		
 	}
 
 }
