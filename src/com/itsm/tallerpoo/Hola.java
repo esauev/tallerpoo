@@ -7,7 +7,9 @@ public class Hola {
 	public static void main(String[] args) {
 //		condicionales();
 //		entradaDatos();
-		ciclos();
+//		ciclos();
+//		vectores();
+		matrices();
 	}
 	
 	public static void condicionales() {
@@ -62,6 +64,65 @@ public class Hola {
 		
 		for(String nombre : nombres) {
 			System.out.println(nombre);
+		}
+	}
+	
+	public static void vectores() {
+//		|"Dato1"|"Dato2"| Ejemplo Vector
+		String[] vector = new String[2];
+		vector[0] = "Dato1";
+		vector[1] = "Dato2";
+		for(String v : vector) {
+			System.out.println("valor: " + v);
+		}
+//		for (int i = 0; i < vector.length; i++) {
+//			System.out.println("posicion: " + i + 
+//					" tiene el valor: " + vector[i]);
+//			continue;
+//		}		
+		
+//		|"maria"|"martha"|
+//		------------------  Ejemplo Vector Paralelo
+//		|   21  |   20   |
+		String[] alumnos = new String[2];
+		Integer[] edades = new Integer[2];
+		alumnos[0] = "maria";
+		edades[0] = 21;
+		alumnos[1] = "martha";
+		edades[1] = 20;
+		for (int i = 0; i < 2; i++) {
+			System.out.println("alumno: " + alumnos[i]
+					+ " tiene: " + edades[i]
+							+ " años");
+		}
+		
+	}
+	
+	public static void matrices() {
+		Integer[][] caja = new Integer[3][3];
+		Scanner ingresar = new Scanner(System.in);
+		for (int i = 0; i < 3; i++) {
+			for (int j = 0; j < 3; j++) {
+				System.out.println("Ingrese en la fila: " + i +
+						" y en la columna: " + j);
+				caja[i][j] = ingresar.nextInt();
+			}
+		}
+		
+		for(int i = 0; i < 3; i++) {
+			for(int j = 0; j < 3; j++) {
+				//opcion 1
+				System.out.print(caja[i][j]);
+				j++;
+				System.out.print(caja[i][j]);
+				j++;
+				System.out.println(caja[i][j]);
+				//opcion2
+				if(j==2)
+					System.out.print(caja[i][j] + "\n");
+				else
+					System.out.print(caja[i][j]);	
+			}
 		}
 	}
 
